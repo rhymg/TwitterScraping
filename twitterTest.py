@@ -45,6 +45,11 @@ while functioning:
                 print('THIS IS A REPEAT')
                 tweets.remove(tweet)
                 repeat = True
+            #alternative method for checking repetition, still under work, this does not fix the loopholes in checks
+            #  if tweet in lastTweets:
+            #      print('THIS IS A REPEAT')
+            #      tweets.remove(tweet)
+            #      repeat = True
 
     # Loop through with new tweets list
     for tweet in tweets:
@@ -59,6 +64,8 @@ while functioning:
 
     lastTweets = tweets
     time.sleep(30)
+    #added an incrementation on var round, so program terminates after 5 rounds
+    #round+=1
     if round == 5:
         functioning = False
     
